@@ -5,5 +5,7 @@ Makefile
 *.toc
 *.out
 *.log
+*.bbl
+*.blg
 main.pdf
 *.synctex.gz
