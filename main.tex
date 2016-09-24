@@ -24,30 +24,31 @@
 \newcommand{\aver}[1]{\left\langle{#1}\right\rangle}
 \newcommand{\zskip}{\!\!\!}
 \newcommand{\Zskip}{\zskip\zskip\zskip}
+\newcommand{\emit}[1]{\SI{#1}{mm\cdot mrad}}
 
 \begin{document}
 
 %%% 封面部分
 \frontmatter
-\input{data/cover}
+%\input{data/cover}
 % 如果使用授权说明扫描页，将可选参数中指定为扫描得到的 PDF 文件名，例如：
 % \makecover[scan-auth.pdf]
-\makecover
+%\makecover
 
 %% 目录
 \tableofcontents
 
 %% 符号对照表
-\input{data/denotation}
+%\input{data/denotation}
 
 
 %%% 正文部分
 \mainmatter
 %\include{data/chap01}
 %\include{data/chap02}
-\include{data/chap03}
+%\include{data/chap03}
 %\include{data/chap04}
-%\include{data/chap05}
+\include{data/chap05}
 %\include{data/chap06}
 
 
@@ -71,13 +72,13 @@
 
 
 %% 致谢
-\include{data/ack}
+%\include{data/ack}
 
 %% 附录
-\begin{appendix}
-\input{data/appendix01}
-\end{appendix}
+%\begin{appendix}
+%\input{data/appendix01}
+%\end{appendix}
 
 %% 个人简历
-\include{data/resume}
+%\include{data/resume}
 \end{document}
