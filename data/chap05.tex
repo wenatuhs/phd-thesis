@@ -51,7 +51,7 @@ E_{SC} \approx \frac{Q}{\varepsilon_0S} = \frac{Q}{\varepsilon_0\pi r^2}
 E_0 \ge \frac{Q}{\varepsilon_0\pi r^2}
 \label{eq:sc-limit}
 \end{equation}
-在光阴极电子枪中，引出场强 $E_0$ 被打火/击穿/暗电流大小等因素限制不能太大，对于 $S$ 波段光阴极电子枪而言，$E_0$ 一般可以取到 \SI{120}{MV/m}。
+在光阴极电子枪中，引出场强 $E_0$ 被打火/击穿/暗电流大小等因素限制不能太大，对于 $S$ 波段光阴极电子枪而言，$E_0$ 一般可以取到 \SI{60}{MV/m}（考虑了发射相位的束流感受到的最大场强）。
 
 若考虑切片的空间电荷场对引出场强的减弱，且忽略不同切片的减弱不同的效应，就可以算出考虑了空间电荷场的束团发射度：
 \begin{equation}
@@ -105,7 +105,7 @@ E_0 \ge \frac{Q}{\varepsilon_0\pi r^2}
 &=&\sigma_x^2\cdot\frac{\hbar\omega-\phi_w+e\sqrt{\frac{e}{4\pi\varepsilon_0}}\cdot\frac{2}{3}\frac{\varepsilon_0 S}{Q}\left(\sqrt{E_0}^3-\sqrt{E_0-\frac{Q}{\varepsilon_0 S}}^3\right)}{3mc^2}
 \label{eq:tot-emit}
 \end{eqnarray}
-其中 $Q_i$ 为第 i 个切片的电荷量。注意上式化求和为积分一步做了变量代换 $Q-q \to q$，其中 $Q$ 为总电荷量，$q$ 为切片 $\zeta$ 以内的全部切片电荷量之和。
+其中 $Q_i$ 为第 i 个切片的电荷量，$Q$ 为总电荷量，$q$ 为切片 $\zeta$ 以内的全部切片电荷量之和。注意上式化求和为积分一步做了变量代换 $Q-q \to q$。
 
 考虑空间电荷限发射（$E_0=E_{SC}$）情形，由式 \ref{eq:tot-emit} 可知：
 \begin{equation}
@@ -489,4 +489,4 @@ NSGA-II 的基本原理如图 \ref{fig:nsgaii} 所示，NSGA-II 在进化过程�
 \section{非线性发射区注入器束流亮度的研究}
 
 \section{小结}
-By adding a harmonic buncher either before or after the emittance compensation solenoid, a two frequency photoinjector is proposed to further improve beam brightness by using cigar beam photoemission. Both the initial RF design and beam dynamics investigations with a GA optimizer are presented. The preliminary simulation results show that with a HOM cavity added, the emittance at injector exit can be reduced by $\sim$25\% at \SI{30}{A} peak current for \SI{200}{pC}, and slice emittance can be reduced to $\sim$\emit{0.10} with a  \SI{0.5}{\mu m/mm} thermal emittance. Nevertheless there're several issues yet to be solved. To name a few, the GA optimizer chooses not to take full advantage of the buncher by lengthening the laser pulse beyond \SI{10}{ps}; putting the buncher downstream the solenoid could achieve smaller emittance compared with buncher before the solenoid. We would continue to investigate the mechanisms behind all these issues in order to further improve the beam emittance.
+本章首先分析了现代注入器中光阴极发射常用的配置：扁平束和笔形束，在阴极上的初始极限热发射度，给出了极限热发射度的公式及达成条件，并从极限热发射度的角度说明笔形束相对于扁平束的优势。随后讨论了光阴极注入器中电子束从产生到传输至注入器出口过程中，对发射度及束流品质可能造成影响的各个因素，由此引出光阴极注入器优化的复杂性：多变量及多优化目标。在明确笔形束可以更好地保持热发射度到注入器出口这一事实后，我们由空间叠加型双频电子枪的思路启发，引入了空间分离型双频光阴极微波电子枪的概念，并设计优化算法对腔型进行了优化。对双频电子枪注入器的动力学进行验证时，由于问题的多变量多优化目标本质，我们开发了基于 NSGA-II 的遗传算法优化器，以清华大学探索 100 高性能计算平台为依托对双频电子枪注入器进行了优化。共采用遗传算法优化了两种配置的注入器，即合并型 S/X 双频电子枪注入器和分离型 S/C 双频电子枪注入器。遗传算法优化结果表面，加入一个高频腔可以将注入器出口处 \SI{200}{pC}，峰值流强 \SI{30}{A} 的束流的发射度降低 $\sim$ 25\%，且切片发射度近乎与热发射度相等，意味着双频电子枪能够将束流的初始横向亮度保持到注入器出口处。当设法将归一化热发射度降低至 \SI{0.5}{\mu m/mm} 时，优化得到了注入器出口处流强 \SI{30}{A} 时切片发射度 $\sim$ \emit{0.10} 的注入器方案。然而双频电子枪注入器遗传算法优化中依然有一些未解决的问题，例如优化器并没有在高频腔存在时充分利用其可以对束流进行聚束的能力，初始束团并没有取到预期的长度（例如 \SI{20}{ps}）；以及在高频腔存在时，注入器出口处优化解并不是空间电荷限发射情形，也即束流没有取到极限热发射度。以上问题的产生原因有待进一步理论及模拟探究。

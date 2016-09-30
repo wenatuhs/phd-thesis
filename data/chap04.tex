@@ -1,20 +1,24 @@
 %!TEX root = ../main.tex
-\chapter{纳米表面光阴极亮度的理论与实验探究}
+\chapter{纳米表面光阴极亮度的实验探究}
 \label{chap:NPC}
+
+如绪论中所述，光阴极表面的粗糙度可能对热发射度造成影响，降低束流亮度。那么是否可能利用表面粗糙度对阴极上束流的品质进行提高呢？随着纳米加工技术的提高，近年来多个实验室（LBNL，UCLA 的 Pegasus 实验室等）对这种可能性进行了一定探究，即在金属阴极表面加工上纳米纹理，使入射激光激励起表面等离激元\cite{Polyakov:2013aa,Li:2013aa}。表面等离激元可以极大地增强光子吸收效率，也就是加强了金属的量子效率；同时光子被囚禁在阴极表面形成极高的激光功率密度，如果采用单光子光电效应，那么发射电荷量可以成倍数提高；若采用多光子光电效应，那么根据多光子光电发射的特征 $J \propto I^n$，可知发射电荷量可成量级地提高\cite{Li:2013aa}。
+
+针对铜表面纳米阴极的实验研究已经陆续开展了一些\cite{Polyakov:2013aa,Li:2013aa}，并已在实验中观察到上百倍的电子产额增益\cite{Li:2013aa}。目前的实验中均采用铜作为纳米表面阴极的基底，这主要考虑到铜的易于获得和加工的特性。本章我们探索了几种新材料：银，镁，镍等作为表面纳米阴极基底的可能性。如前所述，纳米表面阴极相较于传统光滑表面阴极有着电子产额高的优势；然而由于表面上的纳米结构的存在，其发射度必然会受到影响；要衡量纳米表面阴极作为光阴极的潜力必须对其进行综合的测试。本章就通过实验，来探究新材料纳米表面阴极的实际表现。
 
 \section{表面等离激元与纳米表面光阴极}
 \subsection{表面等离激元}
+纳米表面阴极是利用其表面上产生的表面等离激元（Surface Plasmon Polaritons，SPPs 或 Surface Plasmons，SPs）进行光电发射的，本节简单介绍 SPs 的性质。
 \subsubsection{SPs 的本质}
-SPs 是发生在两种材料交界面处的相干电子振荡模式（参见图 \ref{fig:SPs}），当这种相干电子振荡模式与入射到两种材料交界面的光子耦合时，便产生 Surface Plasmon Polariton (SPP)，SPP 可沿交界面传输。一般所说的表面等离激元其实是指 SPP\footnote{SPs 产生的原因是：电磁波因与材料中的自由电子相互作用，而被束缚在交界面上传播。SPs 既不 是纯粹的电荷振荡模也不是单纯的电磁波，而是由这两者组成的。正因为这种混合的机制，称其为 SPP 更加准确}。并不是所有材料交界面处都能产生 SPs，SPs 产生的必要条件是：两种材料的介电常数的实部反号。
+SPs 是发生在两种材料交界面处的相干电子振荡模式（参见图 \ref{fig:SPs}）\cite{Ritchie:1957aa}，当这种相干电子振荡模式与入射到两种材料交界面的光子耦合时，便产生表面等离激元，SPs 可沿交界面传输。SPs 是由于电磁波因与材料中的自由电子相互作用，而被束缚在交界面上传播而产生的，它既不是纯粹的电荷振荡模也不是单纯的电磁波，而是由这两者组成。正因为这种混合的机制，称其为 SPPs 更加准确。并不是所有材料交界面处都能产生 SPs，SPs 产生的必要条件是：两种材料的介电常数的实部反号。
 
 满足这个条件的常见的材料组合是金属和电介质。
-
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.9\textwidth]{SPs}
-\caption{\label{fig:SPs} SPs 示意。a：SPs 的产生与传播；b：SPs 的电磁场场强分布；c：SPs 的色散关系}
+\caption{\label{fig:SPs} SPs 示意\cite{Barnes:2003aa}。a：SPs 的产生与传播；b：SPs 的电磁场场强分布；c：SPs 的色散关系}
 \end{figure}
-	
+
 因为在金属中，其中的电子以电子气的形式存在，其内部本质上是等离子体。不考虑损耗时，金属的相对介电常数可以写做：
 \begin{equation}
 \varepsilon(\omega) = 1-\dfrac{\omega_P^2}{\omega^2}
@@ -26,7 +30,7 @@ SPs 是发生在两种材料交界面处的相干电子振荡模式（参见图 
 \]
 因此当金属中电磁波的 $\omega<\omega_P$ 时，金属的介电常数就是负数。而一般电介质（比如空气）的介电常数是正实数，这就满足了 SPs 的产生条件。
 
-考虑了金属的欧姆损耗后，金属的相对介电常数可以写为：
+考虑了金属的欧姆损耗后，金属的相对介电常数可以写为\cite{wikipedia:aa}：
 \begin{equation}
 \label{equ:e}
 \varepsilon = \varepsilon^{\prime} + i\varepsilon^{\prime\prime}
@@ -34,23 +38,22 @@ SPs 是发生在两种材料交界面处的相干电子振荡模式（参见图 
 其中实部 $\varepsilon^{\prime}$ 就是式 \ref{equ:metal} 中的形式，而虚部 $\varepsilon^{\prime\prime}$ 就造成了 SPs 的传输长度的存在（若无损耗，SPs 可以沿着金属表面传输到无穷远）。
 
 \subsubsection{SPs 的激发}
-SPs 可以用电子或者光子激发。电子激发方式就是将电子束射入金属，射入金属的电子会发生散射，损失的能量就提供给金属内部的等离子体，散射矢量的平行于金属表面的分量就会形成 SPs。
-
+SPs 可以用电子或者光子激发\cite{Novotny:2012aa}。电子激发即将电子束射入金属，射入金属的电子会发生散射，损失的能量就提供给金属内部的等离子体，散射矢量的平行于金属表面的分量就会形成 SPs。
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.9\textwidth]{excitation}
 \caption{\label{fig:exc} 光子激发 SPs 的三种方式}
 \end{figure}
 
-下面重点研究光子激发。为了使光子能够激发 SPs，必须将光子与 SPs 模式耦合起来，也就是形成 SPP。光子激发有三种常用的激发方式：Kretschmann 构型，Otto 构型以及光栅耦合器构型，参见图 \ref{fig:exc}。
+下面重点讨论光子激发。为了使光子能够激发 SPs，必须将光子与 SPs 模式耦合起来，也就是形成 SPPs。光子激发有三种常用的激发方式：Kretschmann 构型，Otto 构型以及光栅耦合器构型\cite{Novotny:2012aa}，参见图 \ref{fig:exc}。
 
-三种激发方式的原理都是通过耦合装置，使入射光子的波矢量的平行（于金属表面的）分量与 SPs 的波矢量的平行分量相等，进而令二者发生持续的能量交换，即耦合。对于我们的目标 --- 建立光电发射与 SPs 之间的联系 --- 而言，最后一种光栅耦合器构型是重点，而且光栅耦合器构型对于理解表面粗糙度对 SPs 产生的影响也是至关重要的。
+三种激发方式的原理都是通过耦合装置，使入射光子的波矢量的平行（于金属表面的）分量与 SPs 的波矢量的平行分量相等，进而令二者发生持续的能量交换，即发生耦合。表面纳米阴极就是依靠最后一种光栅耦合器的原理进行 SPs 激发的。
 
 \paragraph{以棱镜为耦合器}
 后面会说明，SPs 的色散曲线始终在光的色散曲线的右边，因此相同频率的 SPs 和光相比，SPs 的波数一定比光的波数大，无法直接耦合\footnote{典型值是：银和空气的交界面上存在的 SPs 模式的波数 $k_{\text{SP}}\approx 1.03k_0$}。参见图 \ref{fig:exc}，光在通过棱镜后，其平行于金属表面的动量会增大（也即波数增大，$p=\hbar k$），这样就可能使光的横向波数与 SPs 模的横向波数匹配。Kretschmann 构型与 Otto 构型就采用这种原理来激发 SPs。需要注意的是，Kretschmann 构型中的金属层是金属薄膜，而 Otto 构型中的介质层一般是一个极小的气隙。
 
 \paragraph{以金属表面光栅为耦合器}
-金属表面的周期性波浪结构（表面光栅）存在着空间周期，因此具备波数 $k_{\text{grating}}$，光栅耦合器就是利用金属表面的波数来增加光的横向波数，使 SPs 模式与光耦合起来形成 SPP。假设光栅的空间周期为 $a$，那么：
+金属表面的周期性波浪结构（表面光栅）存在着空间周期，因此具备波数 $k_{\text{grating}}$，光栅耦合器就是利用金属表面的波数来增加光的横向波数，使 SPs 模式与光耦合起来形成 SPPs。假设光栅的空间周期为 $a$，那么\cite{Novotny:2012aa}：
 \[
 	k_{\text{SP}} = k_{\text{x, photon}} \pm nk_{\text{grating}} = k_0\sin\theta_0 \pm n\dfrac{2\pi}{a}
 \]
@@ -59,7 +62,7 @@ SPs 可以用电子或者光子激发。电子激发方式就是将电子束射�
 \paragraph{以粗糙金属表面为耦合器}
 前面说明了使用金属表面光栅为耦合器的原理，那么不难理解一般的粗糙金属表面也可以做为耦合器：粗糙的金属表面可以看成由许多空间周期不同的光栅叠加而成。入射角不同的入射光，会选择相应的光栅分量来增加自己的横向波数，进而与 SPs 耦合。
 
-对于随机的粗糙金属表面，由于其各个空间周期的光栅分量都存在，因此理论上可以与以任意入射角入射的光子耦合成 SPP。但是每一个 SPP 模式强度都不大。可以操控金属表面形态，使其耦合出特定的 SPP 模式。这正是等离激元电路（Plasmonic Circuit）的基础。
+对于随机的粗糙金属表面，由于其各个空间周期的光栅分量都存在，因此理论上可以与以任意入射角入射的光子耦合成 SPP。但是每一个 SPP 模式强度都不大。可以操控金属表面形态，使其耦合出特定的 SPP 模式，这也是等离激元电路（Plasmonic Circuit）的基础。
 
 \subsubsection{SPs 的主要性质}
 SPs 有一些非常直观的重要性质。它沿交界面的法向是渐消的，而在平行交界面的方向是传播的，这就是 SPs 最重要的性质：只沿交界面传输，因此 SPs 的能量不会因辐射而损失。但是其能量仍然会在金属表面因欧姆损耗而耗散，所以这就决定了 SPs 不可能沿交界面无限地传输下去，就有传输长度的概念。
@@ -128,12 +131,12 @@ SPs 的趋肤深度在两种介质中不同，在电介质中的趋肤深度要�
 \[
 	a = \dfrac{\lambda_{\text{SP}}}{2}
 \]
-其中 $\lambda_{\text{SP}}$ 是 SPs 的有效波长，则散射会导致 SPs 驻波的形成，这时 SPs 的色散曲线断裂出现禁带，如图 \ref{fig:bg}a 所示。
+其中 $\lambda_{\text{SP}}$ 是 SPs 的有效波长，则散射会导致 SPs 驻波的形成\cite{Barnes:2003aa}，这时 SPs 的色散曲线断裂出现禁带，如图 \ref{fig:bg}a 所示。
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.65\textwidth]{bandgap}
-\caption{\label{fig:bg}禁带形成示意}
+\caption{\label{fig:bg}禁带形成示意\cite{Barnes:2003aa}}
 \end{figure}
 
 禁带形成的原因是，在特定条件下，SPs 会有两个独立的驻波解，这两个驻波解具有相同的波长但频率不同，这两个驻波的频率分别是 $\omega_+$ 和 $\omega_-$，如图 \ref{fig:bg}b 所示，$\omega_+$ 对应的 SPs 波具有更高的能量，因为电荷振荡的幅度更大，且场的扭曲更严重；相反 $\omega_-$ 对应的 SPs 波的能量更低。而频率在两者之间 SPs 波不能传播（衰减模），于是形成了禁带。
@@ -147,10 +150,24 @@ SPs 的趋肤深度在两种介质中不同，在电介质中的趋肤深度要�
 	\item 通过将光射入电介质以提高入射光的横向波数，这种方式对应 ATR（Attenuated Total Reflectance）阴极
 \end{itemize}
 
-\subsubsection{NPC 光阴极}
-在金属表面刻上百纳米（nm）级的周期性结构，就构成了 NPC 光阴极。
-激光入射到该纳米结构（对于激光的作用是反射光栅）时，其横向动量增加，能在表面激发起 SPPs，达到强化光电发射的目的。
+\subsubsection{ATR 光阴极}
+在透明电介质上镀一层几十纳米（nm）厚的金属薄膜，就构成了 ATR 光阴极。激光从透明电介质端射入，其横向动量增加，因而能在金属与真空的交界面激发起 SPPs，达到强化光电发射的目的\cite{Sipe:1981aa}。与一般光阴极不同，激光并非是正入射到金属表面，打出反射电子形成光电流，而是背入射到金属表面，其激发的光电子需穿过几十纳米厚的金属薄膜出射而形成光电流。目前 ATR 阴极的实验已经开展了一些，其原理获得了初步验证\cite{Chen:2011aa,Watanabe:2011aa,Neo:2012aa}。
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.6\textwidth]{ATR}
+\caption{\label{fig:NPC} ATR 光阴极示意图\cite{Watanabe:2011aa}}
+\end{figure}
+	
+ATR 光阴极具有下面特点：
+\begin{itemize}
+	\item 量子效率可以比同材料光滑阴极高 1 $\sim$ 2 个量级
+	\item 由于电子出射面光滑，发射度与同材料光滑阴极相当
+	\item 激光采用背入射方式激发光电子
+	\item 应用于微波电子枪时的微波泄漏的问题还需解决
+\end{itemize}
 
+\subsubsection{NPC 光阴极}
+在金属表面刻上百纳米（nm）级的周期性结构，就构成了 NPC 光阴极。激光入射到该纳米结构（对于激光的作用是反射光栅）时，其横向动量增加，能在表面激发起 SPPs，达到强化光电发射的目的。关于铜纳米表面阴极的实验测量已陆续开展，实验中已观测到上千倍的电子产额增益\cite{Polyakov:2013aa,Li:2013aa}。
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.5\textwidth]{NPC}
@@ -164,35 +181,10 @@ NPC 光阴极具有下面特点：
 	\item 多采用多光子光电发射，尽可能利用 SPPs 对表面上激光功率密度的增强
 	\item 可直接应用于微波电子枪中
 \end{itemize}
-
-
-\subsubsection{ATR 光阴极}
-在透明电介质上镀一层几十纳米（nm）厚的金属薄膜，就构成了 ATR 光阴极。
-
-激光从透明电介质端射入，其横向动量增加，因而能在金属与真空的交界面激发起 SPPs，达到强化光电发射的目的。与一般光阴极不同，激光并非是正入射到金属表面，打出反射电子形成光电流，而是背入射到金属表面，其激发的光电子需穿过几十纳米厚的金属薄膜出射而形成光电流。
-
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=0.6\textwidth]{ATR}
-\caption{\label{fig:NPC} ATR 光阴极原理}
-\end{figure}
-	
-ATR 光阴极具有下面特点：
-\begin{itemize}
-	\item 量子效率可以比同材料光滑阴极高 1 $\sim$ 2 个量级
-	\item 由于电子出射面光滑，发射度与同材料光滑阴极相当
-	\item 激光采用背入射方式激发光电子
-	\item 应用于微波电子枪时的微波泄漏的问题还需解决
-\end{itemize}
-
-本章我们主要研究 NPC 光阴极，即纳米表面光阴极。Nano-patterned photocathode (NPC) has became a hotspot recently because of its promising high charge yield, as well as it could work under IR laser. A NPC is a photocathode that has nano-scale structures on its surface. The nano-scale structures could interact with the incident light of proper wavelength and excite charge density-electromagnetic field oscillation on the surface (which is called surface plasmon polariton, SPP), SPPs could trap the light on the surface therefore enhance the normal electric field by thousands of times, which leads to very strong multiphoton photoemission.
-
-With the improvements of nanotechnologies, several types of NPCs has been fabricated and tested. The measurements on the NPCs seem encouraging since significant photoemission enhancement has been observed. However there're still lots of properties are waiting to be optimized, say, the material of the NPCs. People usually use copper as the material in regard that copper is easy to get and fabricate. Nevertheless we have several alternatives to copper such as silver, magnesium, niobium and aluminum. These metal could support SPPs with proper nano-structures and they all could be optimized to archive very high (better than 90\%) laser absorption.
-
-In order to find better materials for NPCs, we optimized the properties of the nano-structures on several wafers of different materials by Lumerical simulation and measured the reflectivity spectrum of the wafers off-line. Then we chose a silver NPC and put it into a real RF gun to perform the high power test. The silver NPC turned out to have higher charge yield compared to the copper ones while its emittance is slightly larger (15\% larger). The rest of this paper is organized as follows: Section~\ref{sec:sim} describes the optimization of the nano-structures for several NPC wafer. Section~\ref{sec:exp} shows the experimental measurements on the fabricated silver NPC, which consists of two parts: the off-line reflectivity spectrum measurement and the in-situ high power measurement. Section~\ref{sec:misc} discusses some interesting phenomenons observed in the experiments.
+本章我们要研究的就是 NPC 光阴极。
 
 \section{纳米表面光阴极的模拟优化\label{sec:sim}}
-纳米表面光阴极的独特优势是对入射激光的加强吸收和表面场增强，然而要达到对某波长的激光近乎 100\% 的吸收率，其表面的周期性结构必须经过优化。因此在加工纳米结构之前，首先需要通过数值模拟确定纳米周期阵列的最优尺寸。我们采用了 Lumerical FDTD 程序包进行表面纳米结构的优化。
+纳米表面光阴极的独特优势是对入射激光的加强吸收和表面场增强，然而要达到对某波长的激光近乎 100\% 的吸收率，其表面的周期性结构必须经过优化。因此在加工纳米结构之前，首先需要通过数值模拟确定纳米周期阵列的最优尺寸。我们采用了 Lumerical FDTD 程序包\cite{Lumerical:aa}进行表面纳米结构的优化。
 
 \begin{figure}[htbp]
 \centering
@@ -341,7 +333,7 @@ SEM 测量给出银纳米结构的尺寸在 0.2\,mm 左右，而实验中所用�
 图 \ref{fig:qemap} 中还可以观察到一个有趣的现象，即环状的高增益区域。该环的尺寸和银晶片的尺寸吻合，因此该现象说明银晶片与铜阴极盘交界处有很高的电子产额增益。此现象可以解释如下：
 
 \subsection{多光子光电发射曲线}
-将电荷密度 $\sigma$ 和吸收激光功率密度 $I$ 的关系画在对数坐标中，就得到所谓多光子光电发射（$\sigma$-$I$）曲线。该曲线理论上是直线，其斜率就是多光子光电发射的阶数。银晶片的多光子光电发射曲线见图 \ref{fig:key}。
+将电荷密度 $\sigma$ 和吸收激光功率密度 $I$ 的关系画在对数坐标中，就得到所谓多光子光电发射（$\sigma$-$I$）曲线\cite{Girardeau-Montaut:1993aa,Kupersztych:1994aa}。该曲线理论上是直线，其斜率就是多光子光电发射的阶数。银晶片的多光子光电发射曲线见图 \ref{fig:key}。
 \begin{figure}[htbp]
 \begin{center}
 \includegraphics[width=0.6\textwidth]{keyplot}
@@ -350,10 +342,10 @@ SEM 测量给出银纳米结构的尺寸在 0.2\,mm 左右，而实验中所用�
 \end{center}
 \end{figure}
 
-实验中测量了三个数据点，通过拟合得到多光子光电发射曲线。拟合结果表明，在相同的吸收激光功率密度下，银阴极的电子产额要比铜阴极的高（银晶片的拟合曲线有更高的系数 $C$），这个结果符合单晶银逸出功（$\sim$ 4.14\,eV）比多晶铜逸出功（$\sim$ 4.31\,eV）更低的事实。
+实验中测量了三个数据点，通过拟合得到多光子光电发射曲线。拟合结果表明，在相同的吸收激光功率密度下，银阴极的电子产额要比铜阴极的高\cite{Li:2013aa}（银晶片的拟合曲线有更高的系数 $C$），这个结果符合单晶银逸出功（$\sim$ 4.14\,eV）比多晶铜逸出功（$\sim$ 4.31\,eV）更低的事实。
 
 \subsection{发射度测量\label{ssec:emit}}
-银晶片的发射度测量采用螺线管扫描法，测量时所用激光波长为 800\,nm。发射度测量实验布局见图 \ref{fig:layout}，其测量结果见图 \ref{fig:emittance}。
+银晶片的发射度测量采用螺线管扫描法\cite{Ross:1987aa}，测量时所用激光波长为 800\,nm。发射度测量实验布局见图 \ref{fig:layout}，其测量结果见图 \ref{fig:emittance}。
 
 值得注意的是，由于 cathode-plug 的设计，银晶片表面与铜阴极盘表面有一个小的距离（1.5\,mm），这会造成银晶片表面最大场强下降至正常情况的 2/3。该场强下降造成的问题讨论如下：
 
@@ -365,7 +357,7 @@ SEM 测量给出银纳米结构的尺寸在 0.2\,mm 左右，而实验中所用�
 \end{center}
 \end{figure}
 
-从图 \ref{fig:emittance} 中展示的发射度测量结果以及实验中所用的激光横向尺寸可知，银纳米阴极的归一化热发射度分别是 1.6\,mm$\cdot$mrad/mm（x 方向）和 1.7\,mm$\cdot$mrad/mm（y 方向），这大概是平滑铜阴极归一化热发射度（$\sim$ 0.8\,mm$\cdot$mrad/mm）的两倍，同时也比之前的铜纳米阴极归一化热发射度（$\sim$ 1.4\,mm$\cdot$mrad/mm）略大。这个结果是符合直觉的，因为银纳米阴极正是牺牲了发射度以换取更大的电子产额增益。由于银纳米阴极的发射度相对较大，可能并不适合应用于对发射度有严格要求的应用（如 FEL），但是依然可以作为有潜力的电子源用于对电荷量要求高但对发射度要求不严格的应用，例如应用于尾场加速器中。
+从图 \ref{fig:emittance} 中展示的发射度测量结果以及实验中所用的激光横向尺寸可知，银纳米阴极的归一化热发射度分别是 1.6\,mm$\cdot$mrad/mm（x 方向）和 1.7\,mm$\cdot$mrad/mm（y 方向），这大概是平滑铜阴极归一化热发射度（$\sim$ 0.8\,mm$\cdot$mrad/mm）的两倍，同时也比之前的铜纳米阴极归一化热发射度（$\sim$ 1.4\,mm$\cdot$mrad/mm）\cite{Li:2013aa}略大。这个结果是符合直觉的，因为银纳米阴极正是牺牲了发射度以换取更大的电子产额增益。由于银纳米阴极的发射度相对较大，可能并不适合应用于对发射度有严格要求的应用（如 FEL），但是依然可以作为有潜力的电子源用于对电荷量要求高但对发射度要求不严格的应用，例如应用于尾场加速器中。
 \begin{figure}[htbp]
 \begin{center}
 \includegraphics[width=0.6\textwidth]{emittance}
@@ -374,7 +366,7 @@ Ag NPC 的发射度测量结果。上图：x 方向发射度；下图：y 方向
 \end{center}
 \end{figure}
 
-\section{一些讨论\label{sec:misc}}
+\section{实验中一些现象的分析\label{sec:misc}}
 \subsection{高功率下的纳米表面结构损伤}
 \begin{figure}[htbp]
 \begin{center}
