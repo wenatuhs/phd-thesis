@@ -2,12 +2,12 @@
 \chapter{绪论}
 \label{chap:intro}
 
-现代大型加速器应用，如 X 射线自由电子激光，正负电子对撞机，超快电子散射，汤姆逊散射源等对电子束品质提出了很高的要求。下面以 XFEL，MeV UED 和汤姆逊散射源为例，简要介绍各应用对束流品质的需求。
+现代大型直线加速器应用，如 X 射线自由电子激光 XFEL、直线正负电子对撞机、超快电子衍射 UED、汤姆逊散射源 TSS 等对电子束品质提出了很高的要求。下面以 XFEL，MeV UED 和 TSS 为例，简要介绍各应用对束流品质的需求。
 
-\section{现代加速器应用对低发射度束流的需求}
-描述电子束品质常用的参数有发射度，峰值流强，亮度等；其中发射度描述了束团在相空间中所占体积大小，可分为横向发射度和纵向发射度。横向发射度越小，一般意味着束团的横向尺寸与准直性越好；纵向发射度越小，一般意味着束团的纵向长度与能散越小。
-\subsection{XFEL 对束流品质的需求}
-XFEL 即 X 射线自由电子激光。描述 XFEL 的几个重要公式如下\cite{Huang:2007aa}：
+\section{现代直线加速器应用对低发射度束流的需求}
+描述电子束品质常用的参数有发射度、峰值流强、亮度等；其中发射度描述了束团在相空间中所占体积大小，可分为横向发射度和纵向发射度。横向发射度越小，一般意味着束团的横向尺寸与准直性越好；纵向发射度越小，一般意味着束团的纵向长度与能散越小。
+\subsection{XFEL}
+描述 XFEL 的几个重要公式如下\cite{Huang:2007aa}：
 \begin{eqnarray}
 \rho &=& \left[\frac{1}{16}\frac{I_e}{I_A}\frac{K_0^2[JJ]^2}{\gamma_0^3\sigma_x^2k_u^2}\right]^{1/3}\\
 P_{\text{sat}} &=& \rho P_e\\
@@ -15,7 +15,7 @@ L^{\text{1D}}_{G} &=& \frac{\lambda_u}{4\pi\sqrt{3}\rho}\\
 \frac{\varepsilon_n}{\gamma_0} &\le& \frac{\lambda}{4\pi}\\
 \sigma_{\eta} &\ll& \rho
 \end{eqnarray}
-其中 $\rho$ 为皮尔斯参数，它决定了 XFEL 饱和功率 $P_{\text{sat}}$ 、增益长度 $L^{\text{1D}}_{G}$（正比于出光功率饱和所需的波荡器长度）以及所能容忍的束团能散；$\rho$ 越大，饱和功率越大，增益长度越小，所能容忍的束团能散就越大，XFEL 表现就越好。可以看出 $\rho$ 与束团尺寸 $\sigma_x$ 成反比，因此要求束团尺寸越小越好。对于 XFEL 的 X 射线，其波长越短，要求发射度 $\varepsilon_n$ 越小，因此 XFEL 要求束团有尽可能小的横向尺寸以及发射度。图 \ref{fig:xfel} 给出了 XFEL 出光功率随束团发射度的关系，可以看出，若能将束流发射度从 \emit{0.4} 降至 \emit{0.1}，XFEL 出光功率可以提高一个量级。
+其中 $\rho$ 为皮尔斯参数，它决定了 XFEL 饱和功率 $P_{\text{sat}}$ 、增益长度 $L^{\text{1D}}_{G}$（正比于出光功率饱和所需的波荡器长度）以及所能容忍的束团能散；$\rho$ 越大，饱和功率越大，增益长度越小，所能容忍的束团能散就越大，XFEL 表现就越好。可以看出 $\rho$ 与束团尺寸 $\sigma_x$ 成反比，因此要求束团尺寸越小越好。对于 XFEL 的 X 射线，其波长越短，要求发射度 $\varepsilon_n$ 越小，因此 XFEL 要求束团有尽可能小的横向尺寸以及发射度。图 \ref{fig:xfel} 针对 PSI 的 SwissFEL\cite{Patterson:2010aa}，给出了 XFEL 出光功率随束团发射度的关系，可以看出，若能将束流发射度从 \emit{0.4} 降至 \emit{0.1}，XFEL 出光功率可以提高一个量级。
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.6\textwidth]{xfel}
@@ -35,7 +35,7 @@ MeV UED 的空间和时间分辨率如下式描述\cite{Weathersby:2015aa}：
 \Delta s &=& \frac{2\pi}{\lambda_e}\frac{\varepsilon_n}{\sigma_x}\\
 \tau &=& \sqrt{\tau_e^2+\tau_{\text{ph}}^2+\tau_{\text{TOA}}^2+\tau_{\text{VM}}^2}
 \end{eqnarray}
-其中 $\lambda_e$ 为电子的康普顿波长。由上式可见在电子探针横向尺寸 $\sigma_x$ 一定的情况下，空间分辨率随发射度 $\varepsilon_{n}$ 降低而降低，也即能分辨更细微的结构。同时电子的纵向尺寸越小，其时间分辨率也越小。一般 MeV UED 为保证足够的时间和空间分辨率，工作在低电荷量模式，电荷量 $Q < \SI{1}{pC}$，要求发射度 $\varepsilon_{n} < \SI{0.01}{mm\cdot mrad}$，束长尽量短（至少 fs 量级）。根据发射度对电荷量的放缩关系（$\varepsilon_n\propto\sqrt{Q}$），可知其发射度相当于 200\,pC 时 \emit{0.14}，其难度可见一斑。
+其中 $\lambda_e$ 为电子的康普顿波长。由上式可见在电子探针横向尺寸 $\sigma_x$（样品上的电子束团 rms 尺寸）一定的情况下，空间分辨率随发射度 $\varepsilon_{n}$ 降低而降低，也即能分辨更细微的结构。同时电子的纵向尺寸越小，其时间分辨率也越小。一般 MeV UED 为保证足够的时间和空间分辨率，工作在低电荷量模式，电荷量 $Q < \SI{1}{pC}$，要求发射度 $\varepsilon_{n} < \SI{0.1}{mm\cdot mrad}$（达到 $<\SI{0.01}{mm\cdot mrad}$ 更好），束长尽量短（$<\SI{1}{ps}$，若能达到 fs 量级更好）。根据发射度对电荷量的放缩关系（$\varepsilon_n\propto\sqrt{Q}$），可知其发射度相当于 200\,pC 时 \emit{1.4}（达到更理想分辨率则需要 \emit{0.14}），其难度可见一斑。
 
 \subsection{汤姆逊散射源对束流品质的需求}
 汤姆逊散射源通过光子与较高能电子对撞，产生背向散射的高能 X 射线\cite{Milburn:1963aa,Fiocco:1963aa}。汤姆逊散射源的原理见图 \ref{fig:ttx}。
@@ -75,9 +75,9 @@ B_x \propto \frac{n_x}{\varepsilon_{n, x}^2\varepsilon_{n, y}^2}
 
 第二阶段则在上一阶段基础上，进一步优化电子枪结构，以消除多极场/干扰模式对发射度的影响，进一步提高束团亮度。为达到对束团更强聚焦以及束长压缩以提高束团亮度，首腔从 0.5 cell 变到 0.6 cell\cite{Lehrman:1992aa}；由于关联发射度增长被抑制，电子枪中多极场对发射度的改变显现出来，因此电子枪结构/功率馈入变得对称化\cite{Palmer:1998aa}，并采用跑道型耦合孔抑制多极模\cite{Limborg:2005vn, Akre:2008aa}；$\pi$ 模工作时激发起的 0 模对发射度造成影响，因此优化束流孔以扩大频率间隔\cite{Palmer:1998aa}。电子枪腔型的发展过程见图 \ref{fig:guns}。
 
-第三阶段中，电子枪的腔型造成的发射度增长已经很小，注入器出口处的发射度近似由热发射度、非线性 RF 发射度及非线性空间电荷发射度组成\cite{Qiu:1996aa}。此阶段人们开始优化整个注入器结构及激光参数。针对非线性空间电荷力，KV 分布\cite{Kapchinskij:1959aa}被动力学模拟证明可以有效抑制非线性空间电荷力发射度增长\cite{Limborg-Deprey:2006aa,Khojoyan:2013aa}，进而激光整形、扁平束发射（pancake regime）及笔形束发射（cigar regime）等可以产生 KV 分布束团的方法被提出及模拟或实验验证\cite{Khojoyan:2013aa,Khojoyan:2014aa,Musumeci:2008ab,Li:2012aa}。对于非线性 RF 作用，Dowell 和 Raguin 分别提出了两种空间叠合型双频电子枪\cite{Dowell:2004aa,Raguin:2005aa}以实现纵向线性 RF 场，消除非线性 RF 发射度增长。
+第三阶段中，电子枪的腔型造成的发射度增长已经很小，注入器出口处的发射度近似由热发射度、非线性 RF 发射度及非线性空间电荷发射度组成\cite{Qiu:1996aa}。此阶段人们开始优化整个注入器结构及激光参数。针对非线性空间电荷力，KV 分布\cite{Kapchinskij:1959aa}被动力学模拟证明可以有效抑制非线性空间电荷力发射度增长\cite{Limborg-Deprey:2006aa,Khojoyan:2013aa}，进而激光整形、扁平束发射（pancake regime）\cite{bazarov2009maximum}及笔形束发射（cigar regime）\cite{filippetto2014maximum}等可以产生 KV 分布束团的方法被提出及模拟或实验验证\cite{Khojoyan:2013aa,Khojoyan:2014aa,Musumeci:2008ab,Li:2012aa}。对于非线性 RF 作用，Dowell 和 Raguin 分别提出了两种空间叠合型双频电子枪\cite{Dowell:2004aa,Raguin:2005aa}以实现纵向线性 RF 场，消除非线性 RF 发射度增长。
 
-第四阶段，也即当前阶段中，注入器出口处的发射度已迫近热发射度，此时阴极的地位变得重要：阴极材料的选取，阴极表面形态（表面粗糙度，污染）\cite{Vecchione:2012aa,Vecchione:2013aa}，以及阴极表面上的物理过程：肖特基效应，空间电荷限等都会对注入器出口处发射度产生较大影响\cite{qian2012experimental}。在这个阶段中，人们提出了光阴极表面极限亮度并进行了实验验证\cite{bazarov2009maximum}。
+第四阶段，也即当前阶段中，注入器出口处的发射度已迫近热发射度\cite{li2012multi,gulliford2013demonstration,karkare2011effect,}，此时阴极的地位变得重要：阴极材料的选取\cite{Cultrera:2014ab}，阴极表面形态（表面粗糙度，污染）\cite{Vecchione:2012aa,Vecchione:2013aa,Ling:2013aa}，以及阴极表面上的物理过程：肖特基效应，空间电荷限等都会对注入器出口处发射度产生较大影响\cite{qian2012experimental}。在这个阶段中，人们提出了光阴极表面极限亮度并进行了实验验证\cite{bazarov2009maximum,filippetto2014maximum}。
 
 综合以上，对注入器出口束流品质的优化基本分为两个部分，即对光阴极表面热发射度的优化，以及对注入器多个参数的优化，以将光阴极的横向亮度保持到注入器出口。下面详细介绍这两部分的相关研究和进展。
 
