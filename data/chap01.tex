@@ -77,7 +77,7 @@ B_x \propto \frac{n_x}{\varepsilon_{n, x}^2\varepsilon_{n, y}^2}
 
 第三阶段中，电子枪的腔型造成的发射度增长已经很小，注入器出口处的发射度近似由热发射度、非线性 RF 发射度及非线性空间电荷发射度组成\cite{Qiu:1996aa}。此阶段人们开始优化整个注入器结构及激光参数。针对非线性空间电荷力，KV 分布\cite{Kapchinskij:1959aa}被动力学模拟证明可以有效抑制非线性空间电荷力发射度增长\cite{Limborg-Deprey:2006aa,Khojoyan:2013aa}，进而激光整形、扁平束发射（pancake regime）\cite{bazarov2009maximum}及笔形束发射（cigar regime）\cite{filippetto2014maximum}等可以产生 KV 分布束团的方法被提出及模拟或实验验证\cite{Khojoyan:2013aa,Khojoyan:2014aa,Musumeci:2008ab,Li:2012aa}。对于非线性 RF 作用，Dowell 和 Raguin 分别提出了两种空间叠合型双频电子枪\cite{Dowell:2004aa,Raguin:2005aa}以实现纵向线性 RF 场，消除非线性 RF 发射度增长。
 
-第四阶段，也即当前阶段中，注入器出口处的发射度已迫近热发射度\cite{li2012multi,gulliford2013demonstration,karkare2011effect,}，此时阴极的地位变得重要：阴极材料的选取\cite{Cultrera:2014ab}，阴极表面形态（表面粗糙度，污染）\cite{Vecchione:2012aa,Vecchione:2013aa,Ling:2013aa}，以及阴极表面上的物理过程：肖特基效应，空间电荷限等都会对注入器出口处发射度产生较大影响\cite{qian2012experimental}。在这个阶段中，人们提出了光阴极表面极限亮度并进行了实验验证\cite{bazarov2009maximum,filippetto2014maximum}。
+第四阶段，也即当前阶段中，注入器出口处的发射度已迫近热发射度\cite{li2012multi,gulliford2013demonstration,karkare2011effect,karkare2015effects}，此时阴极的地位变得重要：阴极材料的选取\cite{Cultrera:2014ab}，阴极表面形态（表面粗糙度，污染）\cite{Vecchione:2012aa,Vecchione:2013aa,Ling:2013aa}，以及阴极表面上的物理过程：肖特基效应，空间电荷限等都会对注入器出口处发射度产生较大影响\cite{qian2012experimental}。在这个阶段中，人们提出了光阴极表面极限亮度并进行了实验验证\cite{bazarov2009maximum,filippetto2014maximum}。
 
 综合以上，对注入器出口束流品质的优化基本分为两个部分，即对光阴极表面热发射度的优化，以及对注入器多个参数的优化，以将光阴极的横向亮度保持到注入器出口。下面详细介绍这两部分的相关研究和进展。
 
@@ -87,7 +87,7 @@ B_x \propto \frac{n_x}{\varepsilon_{n, x}^2\varepsilon_{n, y}^2}
 \[
 	\varepsilon_{n} =\sigma\sqrt{\dfrac{\hbar\omega-\phi_{\mathrm{eff}}}{3mc^2}}
 \]
-该公式揭示了体发射情形热发射度与金属材料及激光波长的关系。该公式催生了一系列调变金属材料与激光波长来优化热发射度的研究，如 PSI 对四种不同金属阴极热发射度及量子效率的实验\cite{hauri2010intrinsic}，实验中使用了可微调中心波长的激光，通过对每种金属扫描激光波长，同步测量发射度与 QE 变化来验证理论公式。实验中测量了四种金属阴极：Cu，Mo，Nb，Al。实验直接验证了可以通过减小光子能量与有效逸出功的差距来降低热发射度，也同时验证了热发射度降低时，其对应的 QE 也会降低。该实验的结论是 Cu 是最适合用来做光阴极的金属。当入射光光子能波长为 282 nm，引出场强为 25 MV/m  时，Cu 的归一化热发射度为 0.41\,mm$\cdot$mrad/mm，QE 为 $5\times10^{-6}$。
+该公式揭示了体发射情形热发射度与金属材料及激光波长的关系。该公式催生了一系列调变金属材料与激光波长来优化热发射度的研究，如 PSI 对四种不同金属阴极热发射度及量子效率的实验\cite{hauri2010intrinsic}，实验中使用了可微调中心波长的激光，通过对每种金属扫描激光波长，同步测量发射度与 QE 变化来验证理论公式。实验中测量了四种金属阴极：Cu，Mo，Nb，Al。实验直接验证了可以通过减小光子能量与有效逸出功的差距来降低热发射度，也同时验证了热发射度降低时，其对应的 QE 也会降低。该实验的结论是在引出场强较低（25 MV/m）时，由于能够同时提供可接受的 QE 以及最小的热发射度，Cu 是最适合用来做光阴极的金属。当入射光光子能波长为 282 nm，引出场强为 25 MV/m  时，Cu 的归一化热发射度为 0.41\,mm$\cdot$mrad/mm，QE 为 $5\times10^{-6}$。
 
 \subsubsection{采用新的发射机制}
 人们提出了光场使能的场致发射（Photo Field Emission，PFE）来从原理上降低热发射度\cite{Reifenberger:1979aa}。光场使能场致发射本质上是一种场致发射，场致发射是利用量子隧穿效应的电子发射机制，其好处在于出射电子横向动量极小，因此可以有很低发射度，缺点是依靠高梯度微波场发射时其发射束团长度较长（ns 量级）且电荷量较小。若用激光作用于场致发射阴极（一般是针尖或针尖阵列）上，可以提高电子能量，使隧穿概率升高，本不能场致发射的场强下也可进行场致发射。PFE 结合了场致发射发射度低和光电发射可控以及可产生超短束团的优点。PFE 提出后，针对 XFEL 上的应用陆续有实验\cite{Ganter:2008aa,Mingels:2012aa,Mingels:2013aa,Mingels:2014aa}及模拟研究\cite{Fallahi:2014aa}开展。如采用单 ZrC 针尖（半径 5\,$\mu$m）阴极，阴阳极之间加 60\,kV，2\,ns，30\,Hz 的脉冲高压，使用 16\,ps，266\,nm 的短束长激光入射就可以获得高 QE（针尖附近场强高）的同时实现低发射度。PFE 发射理论上可以在引出电荷 150\,pC 时获得 \emit{0.05} 的发射度。
@@ -105,7 +105,7 @@ B_x \propto \frac{n_x}{\varepsilon_{n, x}^2\varepsilon_{n, y}^2}
 热发射度的优化和光阴极注入器的优化是密不可分的：即使在阴极表面产生了超低热发射度，因其可能存在的非线性空间电荷力和非线性 RF 场作用，也极有可能无法将超低热发射度保持到光阴极出口。因此进行光阴极注入器优化时，需要同时考虑阴极上的激光参数。下面介绍光阴极注入器优化的重要进展和工作。
 
 \subsubsection{最高场强的优化}
-提高电子枪及加速管的工作频率可以提高腔内最大场强，可更有效地抑制束流发射阶段空间电荷力发射度增长。目前世界范围内绝大多数注入器均采用 S 波段或 L 波段（LCLS 采用 L 波段注入器\cite{Zhou:2015aa}，PSI 采用 S 波段注入器\cite{prat2014emittance}，Cornell 注入器束线中也是 S 波段加速管\cite{Bartnik:2015aa}，DESY 的 PITZ 注入器中采用 L 波段电子枪\cite{Krasilnikov:2012aa}）Limborg 于 2011 年搭建了 X 波段光阴极注入器测量平台\cite{Limborg-Deprey:2011aa}，第一台 X 波段光阴极注入器于 2016 年成功搭建\cite{Limborg-Deprey:2016aa}，其中阴极发射场强高达 150\,MV/m，其 100\,pC 对应发射度为 \emit{0.7}，虽然发射度较大但其纵向 rms 束长极短，只有 400\,fs，亮度很高。另外一个提高注入器最高场强的办法是降低阴极温度\cite{Rosenzweig:2016aa}。研究发现，当电子枪运行于低温（$\sim$ 20\,K）时，其表面所允许的最大场强大幅上升，可以利用这个性质来进一步抑制束团发射阶段的非线性空间电荷效应。
+提高电子枪及加速管的工作频率可以提高腔内最大场强，可更有效地抑制束流发射阶段空间电荷力发射度增长。目前世界范围内绝大多数注入器均采用 S 波段或 L 波段（LCLS 采用 S 波段注入器\cite{Zhou:2015aa}，PSI 也采用 S 波段注入器\cite{prat2014emittance}，Cornell 注入器束线中采用 L 波段超导加速腔\cite{shemelin2012frequency,Bartnik:2015aa}，DESY 的 PITZ 注入器中采用 L 波段电子枪\cite{Krasilnikov:2012aa}）Limborg 于 2011 年搭建了 X 波段光阴极注入器测量平台\cite{Limborg-Deprey:2011aa}，第一台 X 波段光阴极注入器于 2016 年成功搭建\cite{Limborg-Deprey:2016aa}，其中阴极发射场强高达 150\,MV/m，其 100\,pC 对应发射度为 \emit{0.7}，虽然发射度较大但其纵向 rms 束长极短，只有 400\,fs，亮度很高。另外一个提高注入器最高场强的办法是降低阴极温度\cite{Rosenzweig:2016aa}。研究发现，当电子枪运行于低温（$\sim$ 20\,K）时，其表面所允许的最大场强大幅上升，可以利用这个性质来减小激光横向尺寸从而降低热发射度，以及进一步抑制束团发射阶段的非线性空间电荷效应造成的发射度增长。
 
 \subsubsection{自动优化算法}
 由于光阴极优化的多输入变量多优化目标的本质（优化发射度时要同时兼顾峰值流强），多目标进化算法最早于 2005 年被 Bazarov 应用于光阴极注入器优化\cite{Bazarov:2005aa}。在该工作中，Bazarov 将 NSGA-II 遗传算法\cite{Deb:2002aa} 应用于 Cornell 的直流高压枪注入器优化，遗传算法优化器对于 100\,pC 情形给出了 \emit{0.1} 的结果，对于 1\,nC 情形给出了 \emit{0.7} 的结果，从而证明了遗传算法优化器的可靠性与相对于人工的优势，即可能获得全局最优解。Qiang 将差异进化算法（differential evolution algorithm）应用于类 LCLS 的注入器优化，由于算法的贪婪本质，大大缩短了遗传算法优化所需要的时间\cite{Qiang:2013aa}，当然与此同时带来的问题是可能无法获得全局最优解。Bettoni 受遗传算法启发，将分段单纯形法应用于 SwissFEL 注入器束线优化中，并获得 10\,pC 电荷量下 \emit{0.08} 以及 200\,pC 电荷量下 \emit{0.14} 的优化结果\cite{Bettoni:2015aa}。
